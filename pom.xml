@@ -7,7 +7,7 @@
   </parent>
   <groupId>gov.nih.nlm.nls.skr</groupId>
   <artifactId>skr-webapi</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2-SNAPSHOT</version>
   <name>Java-based API to the Semantic Knowledge Representation (SKR) Scheduler facility</name>
   <description>This Java-based API to the Indexing Initiative Scheduler facility was created to provide users with the ability to programmatically submit jobs to the Scheduler Batch and Interactive facilities instead of using the web-based interface. Three programs are accessible via the Web API: MetaMap, the NLM Medical Text Indexer (MTI), and SemRep. The functionality in these programs includes: automatic indexing of MEDLINE citations, concept-based query expansion, analysis of complex Metathesaurus strings, accurate identification of the terminology and relationships in anatomical documents, and the extraction of chemical binding relations from biomedical text.</description>
   <url>https://github.com/ziy/skr-webapi</url>
