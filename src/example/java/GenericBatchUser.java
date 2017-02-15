@@ -137,7 +137,7 @@ public class GenericBatchUser
 	   singleLineDelimitedInput = true;
 	} else if ( args[i].equals("--singleLinePMID") ||
 		    args[i].equals("--singleLineDelimitedInputWithPMID")) {
-	   singleLineDelimitedInput = true;
+	   singleLineDelimitedInputWithId = true;
 	} else if ( args[i].equals("--priority") ) {
 	  i++;
 	  try {

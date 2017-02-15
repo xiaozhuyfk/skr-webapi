@@ -66,7 +66,7 @@ public class MMInteractive
         String bufferStr = buffer.toString();
         myIntMMObj.setField("APIText", bufferStr);
 
-        myIntMMObj.setField("KSOURCE", "1011");
+        myIntMMObj.setField("KSOURCE", "1516");
 
         // Optional field, program will run default MetaMap if not specified
 

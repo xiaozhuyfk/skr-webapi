@@ -21,7 +21,6 @@ import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.BasicHttpParams;
-import org.apache.http.entity.ContentType;
 import org.apache.http.entity.mime.MultipartEntity;
 import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.content.ContentBody;
@@ -74,17 +73,17 @@ public class GenericObject
   /** url of skr api service, property:  skrapi.serviceurl*/
   public final String service =
     System.getProperty("skrapi.serviceurl",
-		       "http://skr.nlm.nih.gov/cgi-bin/SKR/Restricted_CAS/API_batchValidationII.pl");
+		       "https://ii.nlm.nih.gov/cgi-bin/II/UTS_Required/API_batchValidationII.pl");
 
   /** url of skr Interactive MetaMap api service, property:  skrapi.servicemminterurl*/
   public final String serviceMMInter =
     System.getProperty("skrapi.servicemminterurl",
-		       "http://skr.nlm.nih.gov/cgi-bin/SKR/Restricted_CAS/API_MM_interactive.pl");
+		       "https://ii.nlm.nih.gov/cgi-bin/II/UTS_Required/API_MM_interactive.pl");
 
   /** url of skr Interactive SemRep api service, property:  skrapi.servicesrinterurl*/
   public final String serviceSRInter =
     System.getProperty("skrapi.servicesrinterurl",
-		       "http://skr.nlm.nih.gov/cgi-bin/SKR/Restricted_CAS/API_SR_interactive.pl");
+		       "https://ii.nlm.nih.gov/cgi-bin/II/UTS_Required/API_SR_interactive.pl");
 
   /** cas service ticket */
   private String serviceTicket = "";
@@ -498,7 +497,7 @@ public class GenericObject
   public void setFileField(String fieldName, String localFilename)
   {
     File localFile = new File(localFilename);
-    this.formMap.put(fieldName, new FileBody( localFile, localFilename, "text/plain", "UTF-8" ));
+    this.formMap.put(fieldName, new FileBody( localFile, "text/plain" ));
   } // setFileField
 
   /**
@@ -517,7 +516,7 @@ public class GenericObject
       BufferedWriter bw = new BufferedWriter(new FileWriter(localFile));
       bw.write(buffer);
       bw.close();
-      this.formMap.put(fieldName, new FileBody( localFile, localFile.getAbsolutePath(), "text/plain", "UTF-8" ));
+      this.formMap.put(fieldName, new FileBody( localFile, "text/plain" ));
     } catch (IOException  e) {
       throw new RuntimeException(e);
     }
