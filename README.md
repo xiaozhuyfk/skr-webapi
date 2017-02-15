@@ -5,6 +5,8 @@ Quote from the original introduction of the Semantic Knowledge Representation (S
 
 > This Java-based API to the Indexing Initiative Scheduler facility was created to provide users with the ability to programmatically submit jobs to the Scheduler Batch and Interactive facilities instead of using the web-based interface. Three programs are accessible via the Web API: MetaMap, the NLM Medical Text Indexer (MTI), and SemRep. The functionality in these programs includes: automatic indexing of MEDLINE citations, concept-based query expansion, analysis of complex Metathesaurus strings, accurate identification of the terminology and relationships in anatomical documents, and the extraction of chemical binding relations from biomedical text.
 
+This version uses [SKR_Web_API_V2_3](https://ii.nlm.nih.gov/Web_API/SKR_Web_API_V2_3.jar).
+
 
 Use in a Maven project
 -------------------------
@@ -25,6 +27,6 @@ and adding this dependency
 <dependency>
   <groupId>edu.cmu.lti.oaqa.bio</groupId>
   <artifactId>skr-webapi</artifactId>
-  <version>0.0.4</version>
+  <version>0.0.5</version>
 </dependency>
 ```
