@@ -497,7 +497,7 @@ public class GenericObject
   public void setFileField(String fieldName, String localFilename)
   {
     File localFile = new File(localFilename);
-    this.formMap.put(fieldName, new FileBody( localFile, "text/plain" ));
+    this.formMap.put(fieldName, new FileBody( localFile, localFilename, "text/plain", "UTF-8" ));
   } // setFileField
 
   /**
@@ -516,7 +516,7 @@ public class GenericObject
       BufferedWriter bw = new BufferedWriter(new FileWriter(localFile));
       bw.write(buffer);
       bw.close();
-      this.formMap.put(fieldName, new FileBody( localFile, "text/plain" ));
+      this.formMap.put(fieldName, new FileBody( localFile, localFile.getAbsolutePath(), "text/plain", "UTF-8" ));
     } catch (IOException  e) {
       throw new RuntimeException(e);
     }

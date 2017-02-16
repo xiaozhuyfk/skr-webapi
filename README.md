@@ -27,6 +27,6 @@ and adding this dependency
 <dependency>
   <groupId>edu.cmu.lti.oaqa.bio</groupId>
   <artifactId>skr-webapi</artifactId>
-  <version>0.0.5</version>
+  <version>0.0.6</version>
 </dependency>
 ```
